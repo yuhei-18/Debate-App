@@ -1,0 +1,10 @@
+<h1>スレッド一覧</h1>
+
+<ul>
+  <% @debates.each do |debate| %>
+  <li>
+    <h2><%= debate.title %></h2>
+    <p><%= debate.body %></p>
+  </li>
+  <% end %>
+</ul>
