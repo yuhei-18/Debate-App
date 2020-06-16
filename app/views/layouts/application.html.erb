@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="top-menu">
+      <ul>
+        <li class="title"><%= link_to "DebateApp", debates_path %></li>
+        <li><%= link_to "New Devate", new_debate_path %></li>
+      </ul>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
