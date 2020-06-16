@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Docker for Mac
+ビルド `docker-compose build`  
+起動 `docker-compose up -d`  
 
-Things you may want to cover:
+## 各 Version
+Ruby `ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]`  
+Rails `Rails 6.0.3.1`  
 
-* Ruby version
+## データベース
+PostgreSQL `psql (PostgreSQL) 11.7 (Debian 11.7-0+deb10u1)`  
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## bash への入り方
+`docker-compose run web bundle exec bash`  
