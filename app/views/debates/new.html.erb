@@ -6,9 +6,15 @@
   <ul>
     <li>
       <%= f.text_field :title, placeholder: "ここに議題を入力してください。" %>
+      <% if @debate.errors.messages[:title].any? %>
+      <p class="error-new-debate"><%= @debate.errors.messages[:title][0] %></p>
+      <% end %>
     </li>
     <li>
       <%= f.text_area :body, placeholder: "ここに議題の詳細を入力してください。" %>
+      <% if @debate.errors.messages[:body].any? %>
+      <p class="error-new-debate"><%= @debate.errors.messages[:body][0] %></p>
+      <% end %>
     </li>
     <li>
       <%= f.submit "新規議題作成"%>

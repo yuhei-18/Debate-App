@@ -9,12 +9,16 @@ class DebatesController < ApplicationController
   end
 
   def new
+    @debate = Debate.new
   end
 
   def create
     @debate = Debate.new(debate_params)
-    @debate.save
-    redirect_to debates_path
+    if @debate.save
+      redirect_to debates_path
+    else
+      render "new"
+    end
   end
 
   private

@@ -43,7 +43,7 @@ body {
 }
 
 .top-menu ul {
-  width: 80%;
+  width: 70%;
   margin: 15px auto;
   display: flex;
   justify-content: flex-end;
@@ -71,8 +71,8 @@ body {
 }
 
 .container {
-  width: 70%;
-  margin-left: 15%;
+  width: 60%;
+  margin-left: 20%;
 }
 
 h2 {
@@ -84,6 +84,7 @@ h2 {
   margin-bottom: 30px;
   height: 100px;
   border-left: solid 8px #18F;
+  box-shadow:0px 0px 8px 3px #ccc;
 }
 
 h3 {
@@ -99,13 +100,13 @@ p {
 
 /* debate new.html.erb 用 */
 .new-debate h2 {
-  font-size: 35px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
 }
 
 .new-debate p {
-  color: #888;
+  color: #555;
   font-size: 15px;
   margin: 0 0 20px;
   padding: 0;
@@ -115,9 +116,20 @@ p {
   box-sizing: border-box;
   width: 550px;
   padding: 5px;
-  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.new-debate input[type="submit"] {
+  padding: 10px;
+  margin-top: 25px;
 }
 
 .new-debate textarea {
   height: 150px;
+}
+
+.error-new-debate {
+  color: #F00 !important;
+  margin: 0 !important;
+  font-weight: bold;
 }
