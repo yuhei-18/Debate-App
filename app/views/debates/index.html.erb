@@ -4,6 +4,14 @@
     <li>
       <h3>議題：<%= link_to debate.title, debate_path(debate) %></h3>
       <p>詳細：<%= debate.body %></p>
+      <div class="update-form">
+        <%= link_to "[削除]", 
+          debate_path(debate),
+          method: :delete,
+          class: "delete-debate",
+          data: { confirm: "削除しますか？" } %>
+        <%= link_to "[編集]", edit_debate_path(debate), class: "edit-debate" %>
+      </div>
     </li>
     <% end %>
   </ul>

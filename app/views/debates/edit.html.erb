@@ -1,8 +1,8 @@
 <div class="new-debate">
-  <h2>Add New Debate</h2>
-  <p>新規議題を作成してください。</p>
+  <h2>Edit Debate</h2>
+  <p>議題を編集してください。</p>
 
-  <%= form_for :debate, url: debates_path do |f| %>
+  <%= form_for @debate, url: debate_path(@debate) do |f| %>
   <ul>
     <li>
       <%= f.text_field :title, placeholder: "ここに議題を入力してください。" %>
@@ -17,7 +17,7 @@
       <% end %>
     </li>
     <li>
-      <%= f.submit "新規議題作成"%>
+      <%= f.submit "編集確定"%>
     </li>
   </ul>
   <% end %>

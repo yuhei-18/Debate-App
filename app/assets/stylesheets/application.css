@@ -82,7 +82,6 @@ h2 {
 
 .index-debate ul > li {
   margin-bottom: 30px;
-  height: 100px;
   border-left: solid 8px #18F;
   box-shadow:0px 0px 8px 3px #ccc;
 }
@@ -132,4 +131,15 @@ p {
   color: #F00 !important;
   margin: 0 !important;
   font-weight: bold;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+.update-form a {
+  margin-right: 10px;
 }
