@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_24_155018) do
+ActiveRecord::Schema.define(version: 2020_07_04_144850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,10 @@ ActiveRecord::Schema.define(version: 2020_06_24_155018) do
     t.integer "age"
     t.string "profession"
     t.text "message", null: false
-    t.integer "debate_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "debate_id", null: false
+    t.index ["debate_id"], name: "index_comments_on_debate_id"
   end
 
   create_table "debates", force: :cascade do |t|
@@ -32,4 +33,5 @@ ActiveRecord::Schema.define(version: 2020_06_24_155018) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "debates"
 end

@@ -6,6 +6,7 @@ class DebatesController < ApplicationController
 
   def show
     @debate = Debate.find(params[:id])
+    @comments = Comment.where(debate_id: @debate.id).order(created_at: "desc")
   end
 
   def new
@@ -36,6 +37,8 @@ class DebatesController < ApplicationController
 
   def destroy
     @debate = Debate.find(params[:id])
+    @comments = Comment.where(debate_id: @debate.id)
+    @comments.destroy_all
     @debate.destroy
     redirect_to debates_path
   end
