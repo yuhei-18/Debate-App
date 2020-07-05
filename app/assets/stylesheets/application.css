@@ -43,7 +43,7 @@ body {
 }
 
 .top-menu ul {
-  width: 80%;
+  width: 70%;
   margin: 15px auto;
   display: flex;
   justify-content: flex-end;
@@ -71,8 +71,8 @@ body {
 }
 
 .container {
-  width: 70%;
-  margin-left: 15%;
+  width: 60%;
+  margin-left: 20%;
 }
 
 h2 {
@@ -82,8 +82,8 @@ h2 {
 
 .index-debate ul > li {
   margin-bottom: 30px;
-  height: 100px;
   border-left: solid 8px #18F;
+  box-shadow:0px 0px 8px 3px #ccc;
 }
 
 h3 {
@@ -99,13 +99,13 @@ p {
 
 /* debate new.html.erb 用 */
 .new-debate h2 {
-  font-size: 35px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
 }
 
 .new-debate p {
-  color: #888;
+  color: #555;
   font-size: 15px;
   margin: 0 0 20px;
   padding: 0;
@@ -115,9 +115,123 @@ p {
   box-sizing: border-box;
   width: 550px;
   padding: 5px;
-  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.new-debate input[type="submit"] {
+  padding: 10px;
+  margin-top: 25px;
 }
 
 .new-debate textarea {
   height: 150px;
+}
+
+.error-new-debate {
+  color: #F00 !important;
+  margin: 0 !important;
+  font-weight: bold;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+.update-form a {
+  margin-right: 10px;
+}
+
+.comment-profile {
+  display: flex;
+  padding: 8px 12px 0;
+}
+
+.comment-profile p {
+  font-size: 0.8em;
+  margin: 0 20px 0 0;
+  color: #888;
+}
+
+.comment-profile p span {
+  color: #000;
+  padding-left: 5px;
+}
+
+.debate-title h1 {
+  font-size: 35px;
+  text-align: center;
+  border-bottom: solid 4px #18F;
+}
+
+.debate-title h1 span {
+  margin-right: 5px;
+  font-size: 28px;
+  color: #888;
+}
+
+.debate-title p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0 0 15px 10px;
+  padding: 0;
+}
+
+.comment-contents h3 {
+  padding: 0 12px 4px;
+  margin: 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.comment-contents {
+  background-color: #EEE;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.comment-create-form {
+  display: flex;
+  flex-wrap:wrap;
+  margin-bottom: 20px;
+}
+
+.comment-create-form li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.comment-create-form li:nth-child(1) {
+  width: 40%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.comment-create-form li:nth-child(2) {
+  width: 20%;
+  margin-right: 2%;
+}
+.comment-create-form li:nth-child(3) {
+  width: 31%;
+  margin-right: 2%;
+}
+.comment-create-form li:nth-child(4) {
+  width: 80%;
+  margin: 0 2% 5px;
+}
+.comment-create-form li:nth-child(5) {
+  width: 14%;
+  margin: 0 2% 5px 0;
+}
+.comment-form-name input[type="text"],
+.comment-form-age input[type="number"],
+.comment-form-profession input[type="text"],
+.comment-form-message input[type="text"] {
+  width: 100%;
+  height: 20px;
+}
+.comment-form-submit input[type="submit"] {
+  width: 100%;
+  height: 25px;
 }

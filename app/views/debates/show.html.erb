@@ -1,2 +1,20 @@
-<h1><%= @debate.title %></h1>
-<p><%= @debate.body %></p>
+<div class="debate-title">
+  <h1><span>議題:</span><%= @debate.title %></h1>
+  <p><%= @debate.body %></p>
+</div>
+
+<%= render 'comments/new' %>
+
+<ul>
+  <% @comments.each do |comment| %>
+  <li class="comment-contents">
+    <div class="comment-profile">
+      <p>名前:<span><%= comment.name %></span></p>
+      <p>年齢:<span><%= comment.age %></span></p>
+      <p>職業:<span><%= comment.profession %></span></p>
+      <p>送信日時:<span><%= comment.created_at.strftime("%Y年%m月%d日 %H:%M") %></span></p>
+    </div>
+    <h3><%= comment.message %><h3>
+  </li>
+  <% end %>
+</ul>
