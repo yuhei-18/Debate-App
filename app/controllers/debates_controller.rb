@@ -6,7 +6,7 @@ class DebatesController < ApplicationController
 
   def show
     @debate = Debate.find(params[:id])
-    @comments = Comment.where(debate_id: @debate.id).order(created_at: "desc")
+    @comments = @debate.comments.all.order(created_at: "desc")
   end
 
   def new

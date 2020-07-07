@@ -3,7 +3,25 @@
   <p><%= @debate.body %></p>
 </div>
 
-<%= render 'comments/new' %>
+<%= form_for([@debate, @debate.comments.build]) do |f| %>
+  <ul class="comment-create-form">
+    <li class="comment-form-name">
+      <%= f.text_field :name, placeholder: "名前" %>
+    </li>
+    <li class="comment-form-age">
+      <%= f.number_field :age, placeholder: "年齢" %>
+    </li>
+    <li  class="comment-form-profession">
+      <%= f.text_field :profession, placeholder: "職業" %>
+    </li>
+    <li  class="comment-form-message">
+      <%= f.text_field :message, placeholder: "コメントを入力してください。" %>
+    </li>
+    <li  class="comment-form-submit">
+      <%= f.submit "送信"%>
+    </li>
+  </ul>
+<% end %>
 
 <ul>
   <% @comments.each do |comment| %>

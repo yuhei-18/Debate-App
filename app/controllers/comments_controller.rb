@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def create
-    @debate = Debate.find_by(params[:id])
-    @Comment = @debate.comments.create(comment_params)
+    @debate = Debate.find(params[:debate_id])
+    @debate.comments.create(comment_params)
+    redirect_to debate_path(@debate)
   end
 
   private
